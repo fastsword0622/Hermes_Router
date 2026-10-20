@@ -1,0 +1,10 @@
+{
+  "objective": "Implement app.py answer() returning 42 in the isolated worktree",
+  "functional_requirements": [{"id": "F1", "description": "answer() returns the integer 42"}],
+  "non_functional_requirements": [{"id": "N1", "description": "The module is importable with the installed Python and has no imports or extra dependencies"}],
+  "allowed_files": ["app.py"],
+  "forbidden_changes": ["do not change dependencies", "path:tests/*"],
+  "acceptance_criteria": [{"id": "A1", "description": "The approved command checks imports, loads the function, and verifies its result", "requirement_ids": ["F1", "N1"], "verification_command_ids": ["C1"], "required_files": ["app.py"]}],
+  "verification_commands": [{"id": "C1", "argv": ["python3", "-c", "import ast; from pathlib import Path; tree=ast.parse(Path('app.py').read_text()); assert not any(isinstance(n,(ast.Import,ast.ImportFrom)) for n in ast.walk(tree)); from app import answer; assert answer()==42"], "timeout_seconds": 10}],
+  "risk_level": "low"
+}

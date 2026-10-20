@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+.router/
+.env
+*.egg-info/
+build/
+dist/
+
+# Generated launchd configuration contains machine-specific paths.
+deploy/com.hermes.router.plist

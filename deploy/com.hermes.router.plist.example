@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>HERMES_ROUTER_ALLOWED_REPOS</key>
+		<string>["/Users/YOUR_USER/svn/hermes_router"]</string>
+		<key>HERMES_ROUTER_ALLOW_REAL</key>
+		<string>0</string>
+		<key>HERMES_ROUTER_DATA_DIR</key>
+		<string>/Users/YOUR_USER/codex/hermes-router/data</string>
+		<key>HERMES_ROUTER_HERMES</key>
+		<string>/Users/YOUR_USER/.local/bin/hermes</string>
+		<key>HERMES_ROUTER_LOG_DIR</key>
+		<string>/Users/YOUR_USER/codex/hermes-router/logs</string>
+		<key>HOME</key>
+		<string>/Users/YOUR_USER</string>
+		<key>PATH</key>
+		<string>/Users/YOUR_USER/svn/hermes_router/.venv/bin:/Users/YOUR_USER/.local/bin:/opt/homebrew/bin:/usr/bin:/bin</string>
+	</dict>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>com.hermes.router</string>
+	<key>ProcessType</key>
+	<string>Background</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/YOUR_USER/svn/hermes_router/.venv/bin/python</string>
+		<string>-m</string>
+		<string>hermes_router</string>
+		<string>--host</string>
+		<string>127.0.0.1</string>
+		<string>--port</string>
+		<string>8080</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/YOUR_USER/codex/hermes-router/logs/hermes-router.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/YOUR_USER/codex/hermes-router/logs/hermes-router.out.log</string>
+	<key>ThrottleInterval</key>
+	<integer>30</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/YOUR_USER/svn/hermes_router</string>
+</dict>
+</plist>
