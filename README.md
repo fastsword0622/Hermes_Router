@@ -4,7 +4,11 @@
 
 기존 Hermes Desktop과 CLI를 사용자 인터페이스로 사용하며, Hermes 코어와 기존 Provider 설정을 유지합니다. 작업 실패나 API 오류가 발생하면 MiniMax → GLM → DeepSeek 진단 순서로 대응합니다.
 
-> 현재 이 GitHub 저장소의 공개 내용은 프로그램 안내 문서입니다. 아래 설치·실행 명령은 프로젝트 소스와 스크립트가 준비된 로컬 환경을 기준으로 합니다.
+> **실행 소스:** [router-development 브랜치](https://github.com/fastsword0622/Hermes_Router/tree/router-development) · [소스 ZIP 다운로드](https://github.com/fastsword0622/Hermes_Router/archive/refs/heads/router-development.zip)
+>
+> [Python 소스](https://github.com/fastsword0622/Hermes_Router/tree/router-development/src/hermes_router) · [자동 테스트](https://github.com/fastsword0622/Hermes_Router/tree/router-development/tests) · [설치·실행 스크립트](https://github.com/fastsword0622/Hermes_Router/tree/router-development/scripts)
+>
+> 공개 스냅샷에는 소스·테스트·설치 스크립트·운영 문서가 포함됩니다. 내부 환경조사·인계·상세 진단 문서와 개인 경로가 포함된 원본 배포 설정은 제외했습니다.
 
 ## 주요 기능
 
@@ -70,6 +74,8 @@ flowchart TD
 **로컬 프로젝트 소스 폴더에서** 실행합니다.
 
 ```bash
+git clone --branch router-development https://github.com/fastsword0622/Hermes_Router.git hermes_router
+cd hermes_router
 bash scripts/install.sh --install-skill
 
 # 현재 프로젝트의 실제 절대 경로를 허용 저장소로 등록
